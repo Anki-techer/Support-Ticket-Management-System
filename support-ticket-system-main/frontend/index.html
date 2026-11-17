@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support Ticket Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="side-panel">
+        <div class="status-overview">
+          <p class="eyebrow">System overview</p>
+          <h2>Ticket health</h2>
+          <div class="stat-grid">
+            <div class="stat-card accent">
+              <span class="label">Open</span>
+              <strong data-stat="open">24</strong>
+            </div>
+            <div class="stat-card">
+              <span class="label">In progress</span>
+              <strong data-stat="progress">12</strong>
+            </div>
+            <div class="stat-card">
+              <span class="label">Resolved</span>
+              <strong data-stat="resolved">18</strong>
+            </div>
+            <div class="stat-card">
+              <span class="label">Closed</span>
+              <strong data-stat="closed">42</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="mini-board">
+          <div class="board-header">
+            <p class="eyebrow">Recent activity</p>
+            <button class="ghost-button">Live</button>
+          </div>
+          <ul id="ticket-list" class="ticket-list" aria-live="polite"></ul>
+        </div>
+      </aside>
+
+      <main class="content-panel">
+        <header class="intro-block">
+          <p class="eyebrow">Project brief</p>
+          <h1>Build a support ticket management system using:</h1>
+          <ul class="tech-stack">
+            <li>Java 21</li>
+            <li>Spring Boot</li>
+            <li>PostgreSQL/H2</li>
+            <li>REST API</li>
+            <li>React/Next.js or equivalent frontend</li>
+            <li>Cursor</li>
+            <li>GitHub Copilot</li>
+          </ul>
+        </header>
+
+        <section class="assessment-block">
+          <p>
+            The application is important, but the <strong>main assessment</strong> is how you build it using AI.
+          </p>
+          <p>The main goal is to enable the team to understand:</p>
+          <ul class="goal-list">
+            <li>How to analyse requirements, create specifications</li>
+            <li>How to use Spec-driven development using Cursor / GitHub Copilot / Kiro</li>
+            <li>How to manage AI context and validate AI-generated code</li>
+            <li>How you test and debug</li>
+          </ul>
+        </section>
+
+        <section class="requirements-block">
+          <h2>Application requirements</h2>
+          <p>Build a support ticket management system with the following features:</p>
+          <ol class="requirements-list">
+            <li>Create a ticket.</li>
+            <li>List tickets.</li>
+            <li>View ticket details.</li>
+            <li>Update title, description, priority and assignee.</li>
+            <li>Add comments.</li>
+            <li>Search tickets by keyword.</li>
+            <li>Filter tickets by status.</li>
+            <li>Persist data in a database.</li>
+            <li>Validate input at the backend.</li>
+            <li>Display meaningful errors in the UI.</li>
+          </ol>
+        </section>
+
+        <section class="state-block">
+          <p>The following state machine must be enforced by the backend:</p>
+          <div class="state-line">
+            <span class="state-pill">OPEN</span>
+            <span class="state-separator">+</span>
+            <span class="state-pill">IN_PROGRESS</span>
+            <span class="state-separator">+</span>
+            <span class="state-pill">RESOLVED</span>
+            <span class="state-separator">+</span>
+            <span class="state-pill">CLOSED</span>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
